@@ -38,14 +38,14 @@
     
     var_dump($floatVar);
     echo "<br>";
-    
+
     echo (int)($floatVar);
     echo "<br>";
-    
+
     echo (float)($floatVar);
     echo "<br>";
-    
+
     echo round($floatVar);
     echo "<br>";
-    
+
  ?>
