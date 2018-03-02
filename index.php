@@ -35,7 +35,7 @@
 
     $floatVar = 4.3;
     echo "<br>";
-    
+
     var_dump($floatVar);
     echo "<br>";
 
@@ -46,6 +46,9 @@
     echo "<br>";
 
     echo round($floatVar);
+    echo "<br>";
+
+    var_dump('hello there guys!');
     echo "<br>";
 
  ?>
