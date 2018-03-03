@@ -23,9 +23,29 @@
         $tab[] = 50;
         echo $tab[5];
 
-        echo "<h2> print_r($tab) </h2>";
+    echo "<h2> print_r($tab) </h2>";
+        echo "<pre>";
+        print_r($tab);
+        echo "</pre>";
         print_r($tab);
         echo "<p> drukuje zawartość tablicy </p>";
+
+
+        echo "<h2> Tablica asocjacyjna</h2>";
+        echo "<p> jako klucz mozna podac string - analogicznie jak w objekcie w js </p>";
+        echo "<p> \$man[\"name\"] = \"Jay\";</p>";
+        $man["name"] = "Jay";
+        $man["lastName"] = "eff";
+        echo "<pre>";
+        print_r($man);
+        echo "</pre>";
+
+    echo "<h2> tablica deklarowana 'inline' </h2>";
+        echo '$man2 = array(4,5,6,7,6,2,5,3,3);';
+        $man2 = array(4,5,6,7,6,2,5,3,3);
+        echo "<pre>";
+        print_r($man2);
+        echo "</pre>";
 
      ?>
 
