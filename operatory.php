@@ -31,12 +31,24 @@
         echo "<br>";
 
 
-    echo "<h2> inkrementacja</h2>";
+    echo "<h2> \$i++</h2>";
+    echo "<p> post-inkrementacja</p>";
+    echo "<h2> ++\$i</h2>";
+    echo "<p> pre-inkrementacja</p>";
         $i = 5;
         echo $i; echo "<br>";
+
+        //6
         $i = $i + 1;
         echo $i; echo "<br>";
+
+        //7
         $i += 1;
+        echo $i; echo "<br>";
+
+        //8
+        $i++;
+        echo $i; echo "<br>";
 
 
 
