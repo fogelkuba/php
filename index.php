@@ -51,7 +51,10 @@
     echo "<br>";
 
     $var = "moja nowa zmienna";
-    echo $var;
-    echo $var(1)
+     echo $var;
+    echo $var(1);
+
+    define("NAZWA", "heros");
+    echo NAZWA;
 
  ?>
