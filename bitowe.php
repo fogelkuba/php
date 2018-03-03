@@ -16,6 +16,25 @@
     $b= false;
     echo "<br>";
 
+
+    // 0010 = 2
+    // 1010 = 10
+
+    // and - koniunkcja
+    echo (2 & 10)."<br/>";
+
+
+    // or - alternatywa
+    echo (2 | 10)."<br/>";
+
+    // Xor - exclusive alternative
+    echo (2 ^ 10)."<br/>";
+
+    // not - zaprzeczenie
+    echo (~10)."<br/>";
+
+    // przesuniecia bitowe
+    echo (5 >> 1)."<br>";
      ?>
 </body>
 </html>
