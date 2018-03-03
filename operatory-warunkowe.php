@@ -7,15 +7,19 @@
     <title>Operatory Warunkowe</title>
 </head>
 <body>
-    <?php
-    echo "<h1>Operatory Warunkowe</h1>";
+<?php
 
-    $a = 20;
-    $b = 30;
+    // echo "<h1>Operatory Warunkowe</h1>";
+    //
+    // $a = 20;
+    // $b = 30;
+    //
+    // $msg = ($a > $b) ? "a jest wieksze od b" : "a jest mniejsze lub równe b";
+    // echo $msg;
+    // echo ($a > $b) ? $a : $b;
 
-    $msg = ($a > $b) ? "a jest wieksze od b" : "a jest mniejsze lub równe b";
-    echo $msg;
-    echo ($a > $b) ? $a : $b;
+    $isChecked = true;
+    echo "<input type='checkbox' name='color' value='green' ".($isChecked ? "checked" : "")." /> checkbox";
 
 
      ?>
