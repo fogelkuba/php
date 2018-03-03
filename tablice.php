@@ -47,6 +47,19 @@
         print_r($man2);
         echo "</pre>";
 
+    echo "<h2> tablica 2-wymiarowa </h2>";
+        $people[0]['name'] = "John";
+        $people[0]['lastName'] = "Newman";
+
+        $people[1]['name'] = "Gary";
+        $people[1]['lastName'] = "Oldman";
+
+        $people[2]['name'] = "Tommy";
+        $people[2]['lastName'] = "Badman";
+
+        echo "<pre>";
+        print_r($people);
+        echo "</pre>";
      ?>
 
 </body>
