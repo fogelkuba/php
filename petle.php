@@ -10,7 +10,9 @@
     <h1>Pętle</h1>
     <?php
 
-        
+        for ($i=0; $i < 10; $i++) {
+            echo $i."<br/>";
+        }
 
      ?>
 </body>
