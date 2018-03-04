@@ -8,8 +8,9 @@
 </head>
 <body>
     <h1>Pętle</h1>
-<?php
+    <?php
 
+        
 
      ?>
 </body>
