@@ -8,8 +8,22 @@
 </head>
 <body>
 <?php
+    $str1 = "Hello world!";
+    $str2 = "Hello";
+
+    function dlugosc($a){
+        $strLen = strlen($a);
+        echo $strLen."<br/>";
+    };
+    dlugosc($str1);
+    dlugosc($str2);
 
 
+    function getHigher($a, $b = 0){
+        return ($a > $b) ? $a : $b;
+    }
+
+    echo getHigher(-15);
 
      ?>
 </body>
