@@ -9,6 +9,7 @@
 <body>
     <h1>Pętle Foreach </h1>
     <?php
+    
     echo "<h3> For </h3>";
 
     echo "<ul>";
@@ -18,6 +19,7 @@
             $tab[$i] = $i."hello";
             echo "<li> element list $i </li>";
         };
+
 
     echo"</ul>";
 
