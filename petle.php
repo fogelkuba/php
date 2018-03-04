@@ -10,9 +10,21 @@
     <h1>Pętle</h1>
     <?php
 
+        echo "<h1>For</h1>";
         for ($i=0; $i < 10; $i++) {
             echo $i."<br/>";
+        };
+
+
+        echo "<h1>While</h1>";
+        $j = 0;
+        while ($j <= 15) {
+            echo $j."<br/>";
+            $j++;
         }
+
+
+
 
      ?>
 </body>
