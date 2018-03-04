@@ -28,7 +28,20 @@
     $admin = $readPost | $writePost | $delatePost | $delateUser;
 
 
+    function checkPermission($user, $permission){
+        if ($user & $permission) {
+            return true;
+        }
+        return false;
+    };
 
+    if (checkPermission($user, $writePost)){
+        writePost('admin hello!');
+    };
+
+    function writePost($content){
+        echo "$content";
+    };
 
      ?>
 </body>
