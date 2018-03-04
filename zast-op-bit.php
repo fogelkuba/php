@@ -9,7 +9,10 @@
 <body>
     <h1>Zastosowanie Operatorów Bitowych</h1>
 <?php
-
+    $user;
+    $guest;
+    $moderator;
+    $admin;
 
      ?>
 </body>
