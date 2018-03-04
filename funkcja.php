@@ -22,8 +22,15 @@
     function getHigher($a, $b = 0){
         return ($a > $b) ? $a : $b;
     }
-
     echo getHigher(-15);
+
+    $num = 10;
+    function changeValue(&$valueToChange, $value){
+        $valueToChange = $value;
+    }
+
+    changeValue($num, 100);
+    echo $num;
 
      ?>
 </body>
