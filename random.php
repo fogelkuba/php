@@ -22,7 +22,7 @@
         ["Be yourself; everyone else is already taken.", "Oscar Wilde"],
         ["Simplicity is the ultimate sophistication.", "Leonardo Da Vinci"]
     ];
-
+    
     $rand = rand(0, count($quotes)-1);
     echo"<h3>".$quotes[$rand][0]."</h3>";
     echo"<span>".$quotes[$rand][1]."</span>";
