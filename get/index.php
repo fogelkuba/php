@@ -49,7 +49,10 @@
 
             $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
 
+            // $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING)
+
             if (!empty($page))
+            // if(!empty($page))
             {
                 if (!in_array($page, $allowed_pages))
                  echo "Taka strona nie istnieje";
@@ -65,6 +68,8 @@
         }
         else
            include("start.html");
+
+
 
         ?>
                </div>
