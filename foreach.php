@@ -9,7 +9,7 @@
 <body>
     <h1>Pętle Foreach </h1>
     <?php
-    
+
     echo "<h3> For </h3>";
 
     echo "<ul>";
@@ -36,6 +36,11 @@
         echo "</pre>";
     }
 
+    $tablica = ['1','2','3','4'];
+    foreach ($tablica as $key => $val){
+        echo "$val";
+    };
+    echo count($tablica);
      ?>
 </body>
 </html>
