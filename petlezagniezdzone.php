@@ -24,12 +24,18 @@
                 echo "<td>";
                 echo $result;
                 echo"</td>";
+                // if ($j > 3) {
+                //     break;
+                // }
+                if ($j < 3) {
+                    continue;
+                }
             }
             echo"</tr>";
         }
         echo "</table>";
     }
-    matrix(5, 2)
+    matrix()
      ?>
 </body>
 </html>
