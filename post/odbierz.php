@@ -11,8 +11,8 @@
     <a href="/php/post">Back</a>
 
     <?php
-        // echo $_POST['login'];
 
+        // echo $_POST['login'];
 
         if (isset($_POST['login']) && isset($_POST['pass'])) {
             echo 'witaj hary poter';
