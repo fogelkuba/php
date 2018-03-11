@@ -58,7 +58,7 @@
                  echo "Taka strona nie istnieje";
                 else
                 {
-                    if (is_file($page.".html"))
+                    if (is_file($page.".html")) 
                         include($page.".html");
                     else
                         echo "Taka strona nie istnieje";
