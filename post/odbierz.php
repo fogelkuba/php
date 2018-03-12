@@ -7,9 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
     <a href="/php/post">Back</a>
-
     <?php
 
         // echo $_POST['login'];
@@ -20,7 +18,5 @@
             echo 'brak użytkownika';
         }
      ?>
-
-
 </body>
 </html>
