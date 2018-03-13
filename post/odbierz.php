@@ -8,15 +8,16 @@
 </head>
 <body>
     <a href="/php/post">Back</a>
+    <h2>
     <?php
-
         // echo $_POST['login'];
 
         if (isset($_POST['login']) && isset($_POST['pass'])) {
-            echo 'witaj hary poter';
+            echo 'witaj '.$_POST['login'];
         }else{
             echo 'brak użytkownika';
         }
      ?>
+    </h2>
 </body>
 </html>
