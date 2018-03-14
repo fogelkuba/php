@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +13,29 @@
 <body>
 
 <?php
-    echo 'formularz:';
+    echo 'Logowanie:';
  ?>
     <form action="index.php" method="post" enctype="multipart/formdata">
         <div>
+            <br>
             <div>
-                <p>login: </p>
+                <span>login: </span>
                 <input type="text" name="login" maxlength="15" size="20">
             </div>
+            <br>
             <div>
-                <p>pass: </p>
+                <span>pass: </span>
                 <input type="password" name="pass" maxlength="15" size="20">
             </div>
+            <br>
             <div>
                 <input type="submit" value="Login">
+                <br>
+                <br>
             </div>
         </div>
     </form>
-
+<hr>
 <h2>
     <?php
         if (isset($_POST['login']) && isset($_POST['pass'])) {
@@ -41,7 +50,7 @@
                     echo "Witaj $user";
 
                 }
-                echo "<br/>"."<a href='/php/post'>back</a>";
+
             }else{
                 echo "brak użytkownika! spróbuj ponownie";
             }
