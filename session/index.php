@@ -62,7 +62,7 @@
 
                     if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
                         echo "<h1>Panel Administracyjny:</h1>";
-                        echo "<ul>Opcje:";
+                        echo "<ul><h3>Opcje:</h3>";
                         foreach ($options as $option) {
                             echo "<li>";
                             echo "<a href=".$option['href'].">".$option['label']."</a>";
