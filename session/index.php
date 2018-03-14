@@ -45,42 +45,47 @@
                 'label' => 'Odśwież'
             ),
             1 => array (
-                'href' => 'index.php',
-                'label' => 'Odśwież'
+                'href' => 'index.php?akcja=wyloguj',
+                'label' => 'Wyloguj'
             )
         );
+        if (isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj') {
+            $_SESSION['zalogowany'] = 0;
+            echo 'zostałeś wylogowany koleżko';
+            session_destroy();
+        }else{
+            if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
 
-        if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
+                if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
+                    $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
+                    $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
 
-            if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
-                $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
-                $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+                    if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
+                        echo "<h1>Panel Administracyjny:</h1>";
+                        echo "<ul>Opcje:";
+                        foreach ($options as $option) {
+                            echo "<li>";
+                            echo "<a href=".$option['href'].">".$option['label']."</a>";
+                            echo "</li>";
+                        }
+                        echo "</ul>";
 
-                if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
-                    echo "<h1>Panel Administracyjny:</h1>";
-                    echo "<ul>Opcje:";
+                        $_SESSION['zalogowany'] = 1;
 
-                    for ($i=0; $i < count($options); $i++) {
-                        echo "<li>";
-                        echo "<a href=".$i['href'].">".$i['label']."</a>";
-                        echo "</li>";
+                    }else{
+                        echo "Witaj $user";
+
                     }
 
-                    echo "</ul>";
-
-                    $_SESSION['zalogowany'] = 1;
-
                 }else{
-                    echo "Witaj $user";
-
+                    echo "brak użytkownika! spróbuj ponownie";
                 }
-
             }else{
-                echo "brak użytkownika! spróbuj ponownie";
+                echo "brak użytkownika! spróbuj ponownie!";
             }
-        }else{
-            echo "brak użytkownika! spróbuj ponownie!";
         }
+
+
      ?>
 </h2>
 
