@@ -7,15 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/php/post">Back</a>
+
     <h2>
     <?php
-        // echo $_POST['login'];
-
         if (isset($_POST['login']) && isset($_POST['pass'])) {
-            echo 'witaj '.$_POST['login'];
+
+            if (!empty($_POST['login']) && !empty($_POST['pass'])) {
+                echo 'witaj '.$_POST['login'];
+                echo "<a href='/php/post'>back</a>";
+            }else{
+                echo "brak użytkownika! spróbuj ponownie <a href='/php/post'>tutaj</a>";
+            }
         }else{
-            echo 'brak użytkownika';
+            echo "brak użytkownika! spróbuj ponownie <a href='/php/post'>tutaj</a>";
         }
      ?>
     </h2>
