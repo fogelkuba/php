@@ -1,5 +1,5 @@
 <?php
-
+    session_start(); //$_SESSION['nazwa'] = wartość;
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +37,39 @@
     </form>
 <hr>
 <h2>
-    <?php
-        if (isset($_POST['login']) && isset($_POST['pass'])) {
 
-            if (!empty($_POST['login']) && !empty($_POST['pass'])) {
+    <?php
+        $options = array(
+            0   =>  array(
+                'href' => 'index.php',
+                'label' => 'Odśwież'
+            ),
+            1 => array (
+                'href' => 'index.php',
+                'label' => 'Odśwież'
+            )
+        );
+
+        if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
+
+            if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
                 $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
                 $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
 
-                if ($user === 'kubu' ) {
-                    echo 'witaj kubu supermistrzu';
+                if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
+                    echo "<h1>Panel Administracyjny:</h1>";
+                    echo "<ul>Opcje:";
+
+                    for ($i=0; $i < count($options); $i++) {
+                        echo "<li>";
+                        echo "<a href=".$i['href'].">".$i['label']."</a>";
+                        echo "</li>";
+                    }
+
+                    echo "</ul>";
+
+                    $_SESSION['zalogowany'] = 1;
+
                 }else{
                     echo "Witaj $user";
 
