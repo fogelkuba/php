@@ -4,15 +4,7 @@
 ?>
 
 
-<?php
-// logout
-    if (isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj') {
-        $_SESSION['zalogowany'] = 0;
-        echo 'zostałeś wylogowany koleżko';
-        // echo '<a href="index.php"> Wróć do strony głównej</a>';
-        session_destroy();
-    }
-?>
+
 
 <!DOCTYPE html>
 <html lang="pl">
@@ -24,6 +16,25 @@
 </head>
 <body>
 
+
+    <div style="opacity: 0.3">
+        <?php
+            //sprawdzanie wersji komputera
+            echo $_SERVER['HTTP_USER_AGENT']
+        ?>
+        <hr>
+    </div>
+
+    <?php
+    // logout
+        if (isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj') {
+            $_SESSION['zalogowany'] = 0;
+            echo 'zostałeś wylogowany koleżko';
+            // echo '<a href="index.php"> Wróć do strony głównej</a>';
+            session_destroy();
+        }
+    ?>
+
     <?php
     // wyświetlanie formularza logowania
         if ($_SESSION['zalogowany'] == 0) {
@@ -32,6 +43,17 @@
      ?>
 
     <?php
+        if ( $_SESSION['zalogowany'] == 1 && (time() - $_SESSION['time']) > 10 * 60) {
+            $_SESSION['zalogowany'] = 0;
+            session_destroy();
+            echo "Sesja zakończona z powodu braku aktywności.";
+        }
+        if ($_SESSION['zalogowany'] == 1 && ($_SESSION['info'] != $_SERVER['HTTP_USER_AGENT'])) {
+            session_destroy();
+            echo "Sesja zakończona z powodu bŁędu.";
+        }
+
+
         if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
 
             if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
@@ -52,6 +74,8 @@
                     include('admin-panel.php');
 
                     $_SESSION['zalogowany'] = 1;
+                    $_SESSION['time'] = time();
+                    $_SESSION['info'] = $_SERVER['HTTP_USER_AGENT'];
 
                 }else{
                     echo "Witaj $user";
