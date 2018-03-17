@@ -14,15 +14,12 @@
 <h1>Panel Administracyjny:</h1>
 <ul>
     <h3>Opcje:</h3>
-
 <?php
     foreach ($options as $option) {
         echo "<li>";
             echo "<a href=".$option['href'].">".$option['label']."</a>";
         echo "</li>";
-    };
-
-    $_SESSION['zalogowany'] = 1;
+    }
  ?>
 
 </ul>

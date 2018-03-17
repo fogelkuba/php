@@ -1,10 +1,11 @@
 <?php
+// start sesji
     session_start(); //$_SESSION['nazwa'] = wartość;
 ?>
 
 
-<!-- logout -->
 <?php
+// logout
     if (isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj') {
         $_SESSION['zalogowany'] = 0;
         echo 'zostałeś wylogowany koleżko';
@@ -24,7 +25,8 @@
 <body>
 
     <?php
-        if ($_SESSION['zalogowany'] != 1) {
+    // wyświetlanie formularza logowania
+        if ($_SESSION['zalogowany'] == 0) {
             include('login.php');
         }
      ?>
@@ -33,14 +35,29 @@
         if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
 
             if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
-                $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
-                $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+
+                if ($_SESSION['zalogowany'] == 0) {
+
+                    $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
+                    $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+                };
 
                 if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
+
+                    if ($_SESSION['zalogowany'] == 0) {
+                        $_SESSION['login'] = $login;
+                    }
+
+                    echo 'witaj'.$user;
                     include('admin-panel.php');
+
+                    $_SESSION['zalogowany'] = 1;
+
                 }else{
                     echo "Witaj $user";
-                }
+
+                    echo "<a href='index.php?akcja=wyloguj'>Wyloguj</a>";
+                };
 
             }else{
                 echo "brak użytkownika! spróbuj ponownie";
