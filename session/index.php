@@ -1,6 +1,15 @@
 <?php
 // start sesji
     session_start(); //$_SESSION['nazwa'] = wartość;
+
+    if (!isset($_SESSION['initiate'])) {
+
+        session_regenerate_id();
+        $new_session_id = session_id();
+        
+
+        $_SESSION['initiate'] = 1;
+    }
 ?>
 
 
