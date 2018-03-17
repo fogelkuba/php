@@ -12,27 +12,14 @@
 </head>
 <body>
 
- <?php
-    if ($_SESSION['zalogowany'] != 1) {
-        require('login.php');
-    }
- ?>
-
-<hr>
-<h2>
-
     <?php
-        $options = array(
-            0   =>  array(
-                'href' => 'index.php',
-                'label' => 'Odśwież'
-            ),
-            1 => array (
-                'href' => 'index.php?akcja=wyloguj',
-                'label' => 'Wyloguj'
-            )
-        );
+        if ($_SESSION['zalogowany'] != 1) {
+            include('login.php');
+        }
     ?>
+
+    <hr>
+    <h2>
 
     <?php
         if (isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj') {
@@ -45,22 +32,13 @@
             if ((isset($_POST['login']) && isset($_POST['pass'])) || $_SESSION['zalogowany'] == 1) {
 
                 if ((!empty($_POST['login']) && !empty($_POST['pass'])) || $_SESSION['zalogowany'] == 1  ) {
-                    $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
-                    $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+                    if ($_SESSION['zalogowany'] == 0) {
+                        $user = filter_var($_POST['login'], FILTER_SANITIZE_STRING);
+                        $pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+                    }
 
                     if (($user === 'admin' ) || $_SESSION['zalogowany'] == 1 ) {
-                        echo "<h1>Panel Administracyjny:</h1>";
-                        echo "<ul><h3>Opcje:</h3>";
-
-                        foreach ($options as $option) {
-                            echo "<li>";
-                                echo "<a href=".$option['href'].">".$option['label']."</a>";
-                            echo "</li>";
-                        };
-
-                        echo "</ul>";
-                        $_SESSION['zalogowany'] = 1;
-
+                        include('admin-panel.php');
                     }else{
                         echo "Witaj $user";
                     }
@@ -72,8 +50,6 @@
                 echo "brak użytkownika! spróbuj ponownie!";
             }
         }
-
-
      ?>
 </h2>
 
