@@ -9,7 +9,7 @@
         session_write_close();
         session_id($new_session_id);
         session_start();
-        
+
         $_SESSION['initiate'] = 1;
     }
 ?>
@@ -23,7 +23,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>$_SESSION</title>
+    <title>$_COOKIES</title>
 </head>
 <body>
 
@@ -49,7 +49,7 @@
     <?php
     // wyświetlanie formularza logowania
         if ($_SESSION['zalogowany'] == 0) {
-            include('login.php');
+            include('login-form.php');
         }
      ?>
 
@@ -81,7 +81,7 @@
                         $_SESSION['login'] = $login;
                     }
 
-                    echo 'witaj'.$user;
+
                     include('admin-panel.php');
 
                     $_SESSION['zalogowany'] = 1;
@@ -89,10 +89,9 @@
                     $_SESSION['info'] = $_SERVER['HTTP_USER_AGENT'];
 
                 }else{
-                    echo "Witaj $user";
-
                     echo "<a href='index.php?akcja=wyloguj'>Wyloguj</a>";
                 };
+                echo "Witaj $user";
 
             }else{
                 echo "brak użytkownika! spróbuj ponownie";
