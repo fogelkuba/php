@@ -79,8 +79,7 @@
 
                     if ($_SESSION['zalogowany'] == 0) {
                         $_SESSION['login'] = $login;
-                    }
-
+                    };
 
                     include('admin-panel.php');
 
@@ -100,8 +99,6 @@
             // echo "brak użytkownika! spróbuj ponownie!";
         }
      ?>
-
-
 
 </body>
 </html>
