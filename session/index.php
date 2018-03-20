@@ -28,7 +28,7 @@
 <body>
 
 
-    <div style="opacity: 0.3">
+    <div style="opacity: 0.25">
         <?php
             //sprawdzanie wersji komputera
             echo $_SERVER['HTTP_USER_AGENT']
