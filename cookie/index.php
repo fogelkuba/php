@@ -3,6 +3,11 @@
     session_start();
     //$_SESSION['nazwa'] = wartość;
 
+    if (isset($_GET['ref'])) {
+        $ref = filter_var($_GET['ref'], FILTER_SANITIZE_STRING);
+        
+    }
+
     if (!isset($_SESSION['initiate'])) {
 
         session_regenerate_id();
