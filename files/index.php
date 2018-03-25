@@ -10,6 +10,7 @@
 
     <form class="" action="index.php" method="post" enctype="multipart/formdata">
         <div class="">
+            <input type="hidden" name="MAX_FILE_SIZE" value="30720">
             <input type="file" name="plik" >
             <input type="submit" value="Dodaj plik">
         </div>
