@@ -22,6 +22,7 @@
         if( isset($_FILES['plik']) ) {
 
             print_r($_FILES ['plik']);
+            move_uploaded_file($_FILES['plik']['tmp_name'], 'nazwa.jpg');
             switch ($_FILES['plik']['error']){
 
                 case 0:
