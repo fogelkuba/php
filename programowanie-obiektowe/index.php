@@ -9,25 +9,21 @@
 <body>
 
     <?php
-    date_default_timezone_set("Europe/Warsaw");
+
+    require('class.Time.php');
+
+    // getCurrentTime();
+    // getCurrentTime("H Y");
+    // getFutureTime(6000);
+
+    $a = new Time;
+    $b = new Time;
+
+    $a->getCurrentTime();
+    $b->setFutureTime(20);
 
 
-    function getCurrentTime($pattern = "H:i:s d M Y"){
-        echo date($pattern, time())."<br>";
-    };
-
-    function getFutureTime($days, $pattern = "H:i:s d M Y"){
-        echo date($pattern, strtotime("+ $days days"))."<br>";
-    };
-
-    getCurrentTime();
-    getCurrentTime("H Y");
-
-    getFutureTime(6000);
-
-
-
-     ?>
+    ?>
 
 </body>
 </html>
