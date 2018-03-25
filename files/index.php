@@ -8,13 +8,41 @@
 </head>
 <body>
 
-    <form class="" action="index.php" method="post" enctype="multipart/formdata">
-        <div class="">
-            <input type="hidden" name="MAX_FILE_SIZE" value="30720">
-            <input type="file" name="plik" >
+    <form action="index.php" method="post" enctype="multipart/formdata">
+        <div style="background: rgba(200, 30, 30, 0.75); padding: 10px; border: 2px solid black; border-radius: 4px;">
+            <input type="hidden" name="MAX_FILE_SIZE" value="307200">
+            <input type="file" name="plik">
             <input type="submit" value="Dodaj plik">
         </div>
     </form>
+
+    <span>
+        <?php
+
+        if( isset($_FILES['plik']) ) {
+
+            print_r($_FILES ['plik']);
+            switch ($_FILES['plik']['error']){
+
+                case 0:
+                    break;
+                case 1;
+                    echo "za duzy plik";
+                    break;
+                case 2;
+                    echo "za duzy pli";
+                    break;
+                case 3;
+                    echo "niepelny plik";
+                    break;
+                case 4;
+                    echo "nie wybrano pliku";
+                default:
+            }
+        }
+         ?>
+
+    </span>
 
 </body>
 </html>
