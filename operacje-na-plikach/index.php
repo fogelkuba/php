@@ -25,12 +25,20 @@
     */
     $noFile = "Nie ma takiego pliku";
     $file = 'test.txt';
-    $cursor = @fopen($file, "a");
+    $cursor = @fopen($file, "r+");
 
     if ($cursor) {
-        $content = fread($cursor, filesize($file));
-        fwrite($cursor, 'ble ');
-        echo $content;
+        // $content = fread($cursor, filesize($file));
+        // fwrite($cursor, 'ble ');
+        // echo $content;
+
+//LICZNIK
+    $counter = (int)fread($cursor, filesize($file));
+    $counter++;
+
+    rewind($cursor);
+    fwrite($cursor, $counter);
+
     }else{
         echo $noFile;
     }
