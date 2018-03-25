@@ -19,8 +19,11 @@
         $ref = filter_var($_COOKIE['ref'], FILTER_SANITIZE_STRING);
 
         if ($ref == kazik) {
+            $_COOKIE['ref'] = NULL;
+            setcookie('ref', NULL, -1);
             echo "GRARULATCJE: UŻYCIE KUPONU";
         }
+
     }
 
     foreach ($options as $option) {

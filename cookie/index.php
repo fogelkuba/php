@@ -21,6 +21,8 @@
 
         $_SESSION['initiate'] = 1;
     }
+
+    ob_start();
 ?>
 
 
@@ -110,6 +112,8 @@
         }else{
             // echo "brak użytkownika! spróbuj ponownie!";
         }
+
+        ob_end_flush();
      ?>
 
 </body>
