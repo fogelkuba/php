@@ -15,15 +15,21 @@
     $cursor = fopen("nazwaPliku.txt", "TRYB OTWARCIA");
 
     r - read - otwiera plk do odczytu- ustanawoa wskaznik na poczatku pliku.
-        wymaga stworzeonego pliku
+        wymaga stworzeonego pliku;
+    r+ - pozwala dodatkowo zapiasywać;
+
+    w - czyści plik na starcie, tworzy go jeśli nie ma, zapisuje;
+
+    a - wskaźnik na koncu pliku! - tworzy plik
 
     */
     $noFile = "Nie ma takiego pliku";
     $file = 'test.txt';
-    $cursor = @fopen($file, "r+");
+    $cursor = @fopen($file, "a");
 
     if ($cursor) {
         $content = fread($cursor, filesize($file));
+        fwrite($cursor, 'ble ');
         echo $content;
     }else{
         echo $noFile;
