@@ -13,10 +13,18 @@
 
 
     function getCurrentTime($pattern = "H:i:s d M Y"){
-        echo date($pattern, time());
-    }
+        echo date($pattern, time())."<br>";
+    };
+
+    function getFutureTime($days, $pattern = "H:i:s d M Y"){
+        echo date($pattern, strtotime("+ $days days"))."<br>";
+    };
 
     getCurrentTime();
+    getCurrentTime("H Y");
+
+    getFutureTime(6000);
+
 
 
      ?>
