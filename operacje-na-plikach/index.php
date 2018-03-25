@@ -11,7 +11,25 @@
 
     <?php
 
-    //file    
+    /*file
+    $cursor = fopen("nazwaPliku.txt", "TRYB OTWARCIA");
+
+    r - read - otwiera plk do odczytu- ustanawoa wskaznik na poczatku pliku.
+        wymaga stworzeonego pliku
+
+    */
+    $noFile = "Nie ma takiego pliku";
+    $file = 'test.txt';
+    $cursor = @fopen($file, "r+");
+
+    if ($cursor) {
+        $content = fread($cursor, filesize($file));
+        echo $content;
+    }else{
+        echo $noFile;
+    }
+
+    fclose($cursor);
 
      ?>
 
