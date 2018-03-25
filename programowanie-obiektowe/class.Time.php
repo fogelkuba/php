@@ -5,8 +5,11 @@ class Time {
     const DEFAULT_TIME_ZONE = "Europe/Warsaw";
     public $currentTime;
     public $futureTime;
+    public $timeZone;
 
-    function __construct(){
+    function __construct($timeZone = DEFAULT_TIME_ZONE){
+
+        $this->timeZone = $timeZone;
         date_default_timezone_set(DEFAULT_TIME_ZONE);
         $this->currentTime = $this->getCurrentTime();
     }
