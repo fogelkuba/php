@@ -40,7 +40,8 @@
     <div style="opacity: 0.3">
         <?php
             //sprawdzanie wersji komputera
-            echo $_SERVER['HTTP_USER_AGENT']
+            echo $_SERVER['HTTP_USER_AGENT'];
+            echo time();
         ?>
         <hr>
     </div>
@@ -110,8 +111,6 @@
             // echo "brak użytkownika! spróbuj ponownie!";
         }
      ?>
-
-
 
 </body>
 </html>
