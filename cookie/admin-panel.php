@@ -15,6 +15,14 @@
 <ul>
     <h3>Opcje:</h3>
 <?php
+    if (isset($_COOKIE['ref'])) {
+        $ref = filter_var($_COOKIE['ref'], FILTER_SANITIZE_STRING);
+
+        if ($ref == kazik) {
+            echo "GRARULATCJE: UŻYCIE KUPONU";
+        }
+    }
+
     foreach ($options as $option) {
         echo "<li>";
             echo "<a href=".$option['href'].">".$option['label']."</a>";
