@@ -1,6 +1,7 @@
 <?php
 // start sesji
-    session_start(); //$_SESSION['nazwa'] = wartość;
+    session_start();
+    //$_SESSION['nazwa'] = wartość;
 
     if (!isset($_SESSION['initiate'])) {
 
@@ -9,7 +10,7 @@
         session_write_close();
         session_id($new_session_id);
         session_start();
-        
+
         $_SESSION['initiate'] = 1;
     }
 ?>
@@ -23,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>$_SESSION</title>
+    <title>$_COOKIE</title>
 </head>
 <body>
 
