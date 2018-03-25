@@ -15,9 +15,9 @@
     $subject = "WIADOMOŚĆ DNIA";
     $content = include 'mailing.php';
 
-    $headers = "Content-Type: text/html; charset=UTF8 r n".
-    "From:"."tests@tests.com.pl.eu"."r n".
-    "Reply-to:"."support@support.pl"." r n";
+    $headers = "Content-Type: text/html; charset=UTF8 \r \n".
+    "From:"."tests@tests.com.pl.eu"."\r \n".
+    "Reply-to:"."support@support.pl"." \r \n";
 
     mail($to, $content, $treść, $headers);
 
