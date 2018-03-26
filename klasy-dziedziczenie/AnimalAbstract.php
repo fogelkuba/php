@@ -1,9 +1,13 @@
 <?php
 
 abstract class AnimalAbstract{
-    abstract function eat(){
+    protected $isHungry;
 
+    function __construct($isHungry = true){
+        $this->isHungry = $isHungry;
     }
+
+    abstract function eat();
 }
 
  ?>

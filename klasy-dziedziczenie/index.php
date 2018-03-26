@@ -15,6 +15,7 @@
     $p = new Dog();
     $p->eat();
     $p->eat();
+    $p->eat();
 
 
      ?>
