@@ -1,7 +1,7 @@
 <?php
 
 abstract class AnimalAbstract{
-    function eat($food){
+    abstract function eat(){
 
     }
 }
