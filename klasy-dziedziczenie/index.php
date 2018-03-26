@@ -9,7 +9,7 @@
 <body>
     <?php
 
-    require_once('AnimalAbstract.php');
+
     require_once('Dog.php');
 
     $p = new Dog();
