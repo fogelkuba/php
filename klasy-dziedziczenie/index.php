@@ -9,7 +9,6 @@
 <body>
     <?php
 
-
     require_once('Dog.php');
 
     $p = new Dog();

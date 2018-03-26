@@ -5,9 +5,11 @@ class Dog extends AnimalAbstract{
     protected $isHungry;
 
     function eat(){
-        if ($isHungry == 'true') {
+
+        if ($this->isHungry) {
             echo "eating"."<br>";
             $this->isHungry = false;
+
         }else{
             echo "i'm not hungry"."<br>";
         }
