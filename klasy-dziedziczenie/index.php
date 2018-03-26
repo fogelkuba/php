@@ -13,6 +13,9 @@
     require_once('Dog.php');
 
     $p = new Dog();
+    $p->eat();
+
+
      ?>
 
 </body>
