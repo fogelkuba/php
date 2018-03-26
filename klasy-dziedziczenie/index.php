@@ -7,6 +7,13 @@
     <title>Klasy i dziedziczenie</title>
 </head>
 <body>
+    <?php
+
+    require_once('AnimalAbstract.php');
+    require_once('Dog.php');
+
+    $p = new Dog();
+     ?>
 
 </body>
 </html>
