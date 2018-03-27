@@ -11,7 +11,8 @@
     <?php
 
     require_once('Punkt.php');
-
+    $p = new Punkt();
+    echo $p->x."<br>";
     ?>
 
 </body>
