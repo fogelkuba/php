@@ -13,11 +13,15 @@
     require_once('Punkt.php');
     require_once('Punkt2d.php');
 
-    // $p = new Punkt(40);
+    // $p = new Punkt2d(22, 33);
     // echo $p->x."<br>";
-    
-    $p2 = new Punkt2d(70);
-    echo ($p2->x + $p2->y)."<br>";
+
+    // $p2 = new Punkt2d(70);
+    // echo ($p2->x + $p2->y)."<br>";
+
+    $p = new Punkt2d(22, 33);
+    $p->setX(15);
+    echo $p->getX();
 
     // phpinfo();
 
