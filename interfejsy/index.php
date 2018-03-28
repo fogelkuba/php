@@ -7,10 +7,23 @@
     <title>Interfejsy</title>
 </head>
 <body>
-    <?php
+<?php
 
-    
 
-    ?>
+interface Ekran
+{
+    function Display();
+}
+
+class MonitorA implements Ekran
+{
+    function Display(){
+        
+    }
+}
+
+
+
+?>
 </body>
 </html>
