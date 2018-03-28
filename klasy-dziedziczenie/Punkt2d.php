@@ -1,8 +1,7 @@
 <?php
 
 class Punkt2d extends Punkt {
-    public $x;
-    public $y;
+    private $y;
 
     public function __construct($x = 10, $y=20){
 

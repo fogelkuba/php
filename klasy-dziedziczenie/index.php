@@ -12,6 +12,7 @@
 
     require_once('Punkt.php');
     require_once('Punkt2d.php');
+    require_once('Punkt3d.php');
 
     // $p = new Punkt2d(22, 33);
     // echo $p->x."<br>";

@@ -4,6 +4,7 @@ class Punkt {
 
     // public $x;
     protected $x;
+    // private $x;
 
     public function __construct($x = 0){
         $this->x = $x;
