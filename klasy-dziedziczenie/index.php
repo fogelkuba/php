@@ -18,7 +18,7 @@
     $p2 = new Punkt2d(70);
     echo ($p2->x + $p2->y)."<br>";
 
-    phpinfo();
+    // phpinfo();
 
     ?>
 
