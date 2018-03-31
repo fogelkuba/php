@@ -18,7 +18,7 @@ interface Ekran
 class MonitorA implements Ekran
 {
     function Display(){
-        
+        echo 'display';
     }
 }
 
