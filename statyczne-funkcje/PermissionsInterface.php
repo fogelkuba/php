@@ -1,5 +1,4 @@
 <?php
-
 interface PermissionsInterface
 {
     const READ_POST = 1;
@@ -12,5 +11,4 @@ interface PermissionsInterface
 
     static function checkPermission($userPermission, $permission);
 }
-
 ?>

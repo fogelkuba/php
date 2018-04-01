@@ -1,7 +1,7 @@
 <?php
-require_onc('PermissionsInterface');
+require_once("PermissionsInterface.php");
 
-abstract class Guest implements PermissionsInterface
+abstract class GuestAbstract implements PermissionsInterface
 {
     protected $permission = 0;
 

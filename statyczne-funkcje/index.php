@@ -1,3 +1,5 @@
+<?php #$connector = PhpConsole\Connector::getInstance(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
     require_once('Moderator.php');
     require_once('Admin.php');
 
-    // $g = new Guest();
+    $g = new Guest();
     // $u = new User();
     // $m= new Moderator();
     // $a= new Admin();
