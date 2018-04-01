@@ -12,7 +12,7 @@
             if (!($this->filepointer = @fopen($filename, "r")))
             {
                 $this->isFileOpen = false;
-                throw new Exception( 'nie ma takiego pliku' );
+                throw new Exception( 'nie ma takiego pliku '.$filename );
             }
         }
 

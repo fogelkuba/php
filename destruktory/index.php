@@ -18,8 +18,8 @@
             $reader->getContent();
         }
         catch(Exception $e){
-            echo $e->getMessage();
-            echo $e->getLine();
+            echo $e->getMessage().'<br>';
+            echo 'linia:'.$e->getLine();
         }
         // echo 'end';
     ?>
