@@ -5,7 +5,7 @@ class User extends GuestAbstract
 {
     function __construct()
     {
-        $this->permission = PermissionsInterface::READ_POST | PermissionsInterface::WRITE_POSST;
+        $this->permission = PermissionsInterface::READ_POST | PermissionsInterface::WRITE_POST;
     }
 }
     ?>

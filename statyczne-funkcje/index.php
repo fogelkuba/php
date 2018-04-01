@@ -19,12 +19,13 @@
 
     $g = new Guest();
     $u = new User();
-    // $m= new Moderator();
-    // $a= new Admin();
+    $m= new Moderator();
+    $a= new Admin();
 
-    // echo Guest::DELETE_POST;
+    echo var_dump(Guest::checkPermission($g->getPermission(), PermissionsInterface::READ_POST)).'<br>';
+    echo var_dump(Guest::checkPermission($u->getPermission(), PermissionsInterface::WRITE_POST)).'<br>';
 
-    echo 'test';
+    echo 'test'.'<br>';
 
   ?>
 
