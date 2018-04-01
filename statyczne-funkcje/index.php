@@ -27,8 +27,9 @@
     echo var_dump(GuestAbstract::checkPermission($m->getPermission(), PermissionsInterface::DELETE_POST)).'<br>';
     echo var_dump(GuestAbstract::checkPermission($a->getPermission(), PermissionsInterface::DELETE_USER)).'<br>';
 
-    GuestAbstract::readPost('123');
-    $a->readPost('50');
+    echo 'test'."<br>";
+    // GuestAbstract::readPost('123');
+    // $a->readPost('50');
     echo 'end'.'<br>';
 
   ?>

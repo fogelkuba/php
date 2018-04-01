@@ -26,7 +26,7 @@ abstract class GuestAbstract implements PermissionsInterface
     }
     function readPost($postId){
         if ($this->isPermitted(PermisionsInterface::READ_POST)) {
-            echo "czytam post  mający ID: $postId"."<br />";
+            echo "czytam post mający ID: $postId"."<br />";
         }
 
     }
