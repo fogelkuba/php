@@ -22,14 +22,22 @@
     $m= new Moderator();
     $a= new Admin();
 
-    echo var_dump(GuestAbstract::checkPermission($g->getPermission(), PermissionsInterface::READ_POST)).'<br>';
-    echo var_dump(GuestAbstract::checkPermission($u->getPermission(), PermissionsInterface::WRITE_POST)).'<br>';
-    echo var_dump(GuestAbstract::checkPermission($m->getPermission(), PermissionsInterface::DELETE_POST)).'<br>';
-    echo var_dump(GuestAbstract::checkPermission($a->getPermission(), PermissionsInterface::DELETE_USER)).'<br>';
+    // echo var_dump(GuestAbstract::checkPermission($g->getPermission(), PermissionsInterface::READ_POST)).'<br>';
+    // echo var_dump(GuestAbstract::checkPermission($u->getPermission(), PermissionsInterface::WRITE_POST)).'<br>';
+    // echo var_dump(GuestAbstract::checkPermission($m->getPermission(), PermissionsInterface::DELETE_POST)).'<br>';
+    // echo var_dump(GuestAbstract::checkPermission($a->getPermission(), PermissionsInterface::DELETE_USER)).'<br>';
 
-    echo 'test'."<br>";
-    // GuestAbstract::readPost('123');
-    // $a->readPost('50');
+    echo 'test'.'<br>';
+
+    if (!$g->readPost(50)) {
+        echo "nie moge czytac";
+    }
+
+
+    if (!$u->writePost('Pane TEDEusz', 'Rapsy')) {
+        echo "nie moge pisac"."<br>";
+    }
+
     echo 'end'.'<br>';
 
   ?>

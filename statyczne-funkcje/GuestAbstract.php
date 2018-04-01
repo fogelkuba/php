@@ -24,11 +24,23 @@ abstract class GuestAbstract implements PermissionsInterface
         }
         return false;
     }
-    function readPost($postId){
-        if ($this->isPermitted(PermisionsInterface::READ_POST)) {
-            echo "czytam post mający ID: $postId"."<br />";
-        }
 
+    function readPost($postId){
+        if ($this->isPermitted(PermissionsInterface::READ_POST)) {
+            echo "czytam post mający ID: $postId"."<br />";
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function writePost($postText, $place){
+        if ($this->isPermitted(PermissionsInterface::WRITE_POST)) {
+            $msg = "dodano $postText w sekcji $place";
+            echo "$msg"."<br>";
+            return true;
+        }else{
+            return false;
+        }
     }
 }
  ?>

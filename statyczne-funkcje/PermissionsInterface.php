@@ -8,7 +8,6 @@ interface PermissionsInterface
 
     function getPermission();
     function isPermitted($permission);
-
     static function checkPermission($userPermission, $permission);
 }
 ?>
