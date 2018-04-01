@@ -6,6 +6,11 @@ interface PermissionsInterface
     const WRITE_POSST = 2;
     const DELETE_POST = 4;
     const DELETE_USER = 8;
+
+    function getPermission();
+    function isPermitted();
+
+    static function checkPermission();
 }
 
 ?>

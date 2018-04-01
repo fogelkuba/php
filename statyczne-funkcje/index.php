@@ -13,6 +13,11 @@
     require_once('Guest.php');
     require_once('User.php');
 
+    $g = new Guest();
+    $u = new User();
+
+    echo Guest::DELETE_POST;
+
   ?>
 
 </body>
