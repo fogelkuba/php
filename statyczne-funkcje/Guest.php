@@ -1,7 +1,7 @@
 <?php
-require_once("PermissionsInterface.php");
+require_once("GuestAbstract.php");
 
-class Guest implements PermissionsInterface
+class Guest extends GuestAbstract
 {
 
 }
