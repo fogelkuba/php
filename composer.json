@@ -1,0 +1,12 @@
+{
+    "name": "kubafogel/php",
+    "require": {
+        "phpconsole/phpconsole": "^3.1"
+    },
+    "authors": [
+        {
+            "name": "fogelkuba",
+            "email": "fogelkuba@gmail.com"
+        }
+    ]
+}
