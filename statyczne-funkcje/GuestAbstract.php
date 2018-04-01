@@ -18,8 +18,11 @@ abstract class Guest implements PermissionsInterface
         return $this->permission;
     }
 
-    function isPermitted(){
-        
+    function isPermitted($permission){
+        if ($this->permission & $permission) {
+            return true;
+        }
+        return false;
     }
 }
  ?>
