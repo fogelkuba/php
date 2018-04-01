@@ -10,7 +10,7 @@
     <h1>Destruktory</h1>
     <?php
         require_once("FileRead.php");
-        echo 'test';
+        // echo 'test';
 
         try
         {
@@ -19,9 +19,9 @@
         }
         catch(Exception $e){
             echo $e->getMessage();
-            // echo $e->getLine();
+            echo $e->getLine();
         }
-        echo 'end';
+        // echo 'end';
     ?>
 </body>
 </html>
