@@ -7,10 +7,13 @@
     <title>Statyczne Funkcje</title>
 </head>
 <body>
+    <h1>Statyczne Funkcje</h1>
 
 <?php
+    require_once('Guest.php');
+    require_once('User.php');
 
- ?>
+  ?>
 
 </body>
 </html>
