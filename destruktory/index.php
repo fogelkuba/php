@@ -10,6 +10,18 @@
     <h1>Destruktory</h1>
     <?php
         require_once("FileRead.php");
+        echo 'test';
+        
+        try
+        {
+            $reader = new FileRead('test.txt');
+            $reader->getContent();
+        }
+        catch(Exception $e){
+            // echo $e->getMessage();
+            // echo $e->getLine();
+        }
+        echo 'end';
     ?>
 </body>
 </html>
