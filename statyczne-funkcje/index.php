@@ -33,7 +33,6 @@
         echo "nie moge czytac";
     }
 
-
     if (!$u->writePost('Pane TEDEusz', 'Rapsy')) {
         echo "nie moge pisac"."<br>";
     }
