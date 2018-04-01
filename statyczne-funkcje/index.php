@@ -12,9 +12,13 @@
 <?php
     require_once('Guest.php');
     require_once('User.php');
+    require_once('Moderator.php');
+    require_once('Admin.php');
 
     $g = new Guest();
     $u = new User();
+    $m= new Moderator();
+    $a= new Admin();
 
     echo Guest::DELETE_POST;
 

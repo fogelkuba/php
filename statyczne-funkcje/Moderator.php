@@ -5,7 +5,9 @@ class Moderator extends GuestAbstract
 {
     function __construct()
     {
-        $this->permission = PermissionsInterface::READ_POST | PermissionsInterface::WRITE_POST | PermissionsInterface::DELETE_POST;
+        $this->permission = PermissionsInterface::READ_POST
+        | PermissionsInterface::WRITE_POST
+        | PermissionsInterface::DELETE_POST;
     }
 }
     ?>
