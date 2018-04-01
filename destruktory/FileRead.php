@@ -1,8 +1,10 @@
 <?php
     class FileRead {
 
+        protected $filepointer;
+
         function __construct($filename){
-            $wsk = @fopen($filename, "r");
+            $this->filepointer = @fopen($filename, "r");
         }
 
     }
