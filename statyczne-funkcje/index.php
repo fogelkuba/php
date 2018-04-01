@@ -18,7 +18,7 @@
     require_once('Admin.php');
 
     $g = new Guest();
-    // $u = new User();
+    $u = new User();
     // $m= new Moderator();
     // $a= new Admin();
 
