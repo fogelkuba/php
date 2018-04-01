@@ -8,9 +8,9 @@ interface PermissionsInterface
     const DELETE_USER = 8;
 
     function getPermission();
-    function isPermitted();
+    function isPermitted($permission);
 
-    static function checkPermission();
+    static function checkPermission($userPermission, $permission);
 }
 
 ?>
