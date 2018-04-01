@@ -11,7 +11,7 @@
 
             if (!($this->filepointer = @fopen($filename, "r")))
             {
-                throw new Exception( ['nie ma takiego pliku', $code, $previous]);
+                throw new Exception( 'nie ma takiego pliku' );
             }
         }
 
