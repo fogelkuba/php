@@ -9,6 +9,15 @@
 <body>
     <?php
 
+    $host = 'localhost';
+    $user = 'root';
+    $password = 'root';
+    $database = 'kursmysql';
+    $port = '8888';
+
+    $con = mysqli_connect( $host, $user, $password) || die(mysql_error('blad laczenia'));
+    mysqli_select_db($con, $database) or die(mysqli_error($con));
+
     ?>
 </body>
 </html>
