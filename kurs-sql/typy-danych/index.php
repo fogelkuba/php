@@ -75,13 +75,13 @@ SET (max 64 wartości)
 </pre>
         <?php
 
-            $mysqlConnection = @mysql_connect("localhost", "root", "vertrigo") or die(mysql_error());
+            $mysqlConnection = @mysqli_connect("localhost", "root", "root") or die(mysqli_error());
 
-            mysql_select_db("kursmysql") or die(mysql_error());
-            mysql_set_charset("utf8");
+            mysqli_select_db($mysqlConnection, "kursmysql") or die(mysqli_error());
+            mysqli_set_charset($mysqlConnection, "utf8");
 
 
-            mysql_close($mysqlConnection);
+            mysqli_close($mysqlConnection);
 
         ?>
     </body>
