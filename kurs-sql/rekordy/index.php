@@ -24,12 +24,12 @@
     mysqli_select_db($con, 'klienci');
     mysqli_set_charset($con, 'utf8');
 
-    $query = "
-        INSERT INTO klienci
-        (name, surname, age)
+    $name = 'pjplhplgfplpflyf-drop-database';
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
 
-        VALUES
-        ('test2', 'test2', 22)
+    $query = "
+        INSERT INTO klienci (name, surname, age)
+        VALUES ('$name', 'test2', 22)
     ";
     mysqli_query($con, $query) or die(mysqli_error($con));
 
