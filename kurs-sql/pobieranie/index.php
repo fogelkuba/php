@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>aktualizacja</title>
+    <title>Pobieranie Danych</title>
 </head>
 <body>
 
@@ -31,13 +31,18 @@
     //     login = '' AND pass = ''
     // ";
 
-    $query= "
-        UPDATE klienci SET name = 'ana' WHERE  login = 'Szymon'
-        ";
+    // $query = "
+    //     UPDATE klienci SET name = 'ana' WHERE  login = 'Szymon'
+    //     ";
+
+    $query = "
+        SELECT * FROM klienci WHERE name = 'Jan'
+    ";
 
 
-    mysqli_query($con, $query) or die(mysqli_error($con));
-
+    $result = mysqli_query($con, $query) or die(mysqli_error($con));
+    print_r ($result)."<br><br>";
+    echo mysqli_num_rows($result);
     mysqli_close($con);
 ?>
 </body>
