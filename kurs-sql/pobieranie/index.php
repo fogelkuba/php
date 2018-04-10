@@ -36,13 +36,19 @@
     //     ";
 
     $query = "
-        SELECT * FROM klienci WHERE name = 'Jan'
+        SELECT * FROM klienci WHERE name LIKE '%a'
     ";
 
 
     $result = mysqli_query($con, $query) or die(mysqli_error($con));
-    print_r ($result)."<br><br>";
-    echo mysqli_num_rows($result);
+    // print_r ($result)."<br><br>";
+    // echo mysqli_num_rows($result);
+
+    if(mysqli_num_rows($result) > 0 ){
+        echo mysqli_num_rows($result);
+    }else{
+        echo 0;
+    }
     mysqli_close($con);
 ?>
 </body>
