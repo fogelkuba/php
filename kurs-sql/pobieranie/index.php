@@ -51,9 +51,16 @@
     }else{
         echo 'brak rezultatów';
     }
+?>
 
-    print_r( mysqli_fetch_row($result));
+<pre>
+<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php print_r( mysqli_fetch_array($result, MYSQLI_NUM)); ?>
+<?php print_r( mysqli_fetch_array($result, MYSQLI_BOTH)); ?>
+</pre>
 
+
+<?php
     mysqli_close($con);
 ?>
 </body>
