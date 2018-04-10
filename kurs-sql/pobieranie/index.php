@@ -59,6 +59,7 @@
 <?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
 <?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
 <?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+
 <?php //print_r( mysqli_fetch_array($result, MYSQLI_NUM)); ?>
 <?php //print_r( mysqli_fetch_array($result, MYSQLI_BOTH)); ?>
 </pre>
