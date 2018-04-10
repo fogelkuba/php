@@ -54,14 +54,29 @@
 ?>
 
 <pre>
-<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
-<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
-<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
-<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
-<?php print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php //print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php //print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php //print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php //print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
+<?php //print_r( mysqli_fetch_array($result, MYSQLI_ASSOC)); ?>
 
 <?php //print_r( mysqli_fetch_array($result, MYSQLI_NUM)); ?>
 <?php //print_r( mysqli_fetch_array($result, MYSQLI_BOTH)); ?>
+
+<?php
+
+
+for ($i=0; $i < mysqli_num_rows($result); $i++) {
+    $row = mysqli_fetch_assoc($result);
+    echo "<table border='1' cellspacing='0' style='float: left; margin 10px'>";
+    foreach($row as $key => $value)
+    {
+        echo "<tr><td>".$key.$value."</td></tr>";
+    }
+    echo "</table>";
+} ;
+?>
+
 </pre>
 
 
