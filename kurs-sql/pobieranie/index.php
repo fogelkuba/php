@@ -35,8 +35,10 @@
     //     UPDATE klienci SET name = 'ana' WHERE  login = 'Szymon'
     //     ";
 
+    $var = '';
+
     $query = "
-        SELECT * FROM klienci WHERE name LIKE '%a'
+        SELECT * FROM klienci
     ";
 
 
@@ -45,10 +47,13 @@
     // echo mysqli_num_rows($result);
 
     if(mysqli_num_rows($result) > 0 ){
-        echo mysqli_num_rows($result);
+        echo 'ilośc wyników: '.mysqli_num_rows($result);
     }else{
-        echo 0;
+        echo 'brak rezultatów';
     }
+
+    print_r( mysqli_fetch_row($result));
+
     mysqli_close($con);
 ?>
 </body>
