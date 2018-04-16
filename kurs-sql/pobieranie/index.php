@@ -75,9 +75,6 @@ for ($i=0; $i < mysqli_num_rows($result); $i++) {
 
 </pre>
 
-
-
-
 <?php
     mysqli_close($con);
 ?>
